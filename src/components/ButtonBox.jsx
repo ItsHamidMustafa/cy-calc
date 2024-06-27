@@ -14,7 +14,6 @@ export const ButtonBox = () => {
                 <Button label='7' />
                 <Button label='8' />
                 <Button label='9' />
-                {/* <Button label='*' /> */}
                 <Button label='&times;' className='gray-button' />
             </div>
             <div className='row'>
