@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --contrast-black: #000;
+  --dark-black: #222222;
+  --light-black: #686868;
+  --light-yellow: #fff27a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-black);
+  height: 100vh;
+}
+
+.wrapper {
+  height: 70vh;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 30px;
+  background: var(--contrast-black);
+  padding: 10px 10px;
+}
+
+.screen {
+  width: 99%;
+  height: 35%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 48px;
   color: white;
+  background-color: var(--dark-black);
+  padding: 15px;
+  overflow-x: scroll;
+  font-family: 'DS-Digital';
 }
 
-.App-link {
-  color: #61dafb;
+.button-box {
+  display: flex;
+  flex-direction: column;
+  height: 59%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+}
+
+.btn {
+  border-radius: 50px;
+  aspect-ratio: 1/1;
+  height: 90%;
+  font-size: 24px;
+  color: #ffff;
+  background: var(--dark-black);
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: invert(360);
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
+.button-box>.row:first-child .btn {
+  background-color: var(--light-black);
+}
+
+.gray-button {
+  background: var(--light-black);
+}
+
+.yellow-button {
+  background: var(--light-yellow);
+  color: var(--contrast-black);
 }
